@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.wrapper {
+  margin: 10px 0; }
+
+.directory {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.peep {
+  background-color: #efefef;
+  margin: .25%;
+  width: 32.75%; }
+  @media screen and (max-width: 960px)  {
+    .peep {
+      width: 49.5%; } }
+  @media screen and (max-width: 600px)  {
+    .peep {
+      width: 99.5%; } }
+  .peep:hover {
+    box-shadow: 0 0 100px #aaa;
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transition: -webkit-transform .2s;
+            transition: transform .2s; }
+
+.peep__pic {
+  float: left; }
+
+.peep__info {
+  margin-left: 165px; }
+
+.peep__info-more {
+  color: #7f0000;
+  font-size: 12px; }

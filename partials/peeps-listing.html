@@ -1,0 +1,28 @@
+<div class="wrapper">
+	<h1>SocioPeeps</h1>
+	<fieldset>
+		<label>Search: </label>
+		<input type="text" ng-model="search.name" placeholder="Search by name..." />
+	</fieldset>
+	<fieldset>
+		<label>Sort by: </label>
+		<select ng-model="sortOptions">
+			<option vlaue="name">Alphabetical</option>
+			<option value="age">Age</option>
+		</select>
+	</fieldset>
+	
+	<div class="directory">
+		<div class="peep" ng-repeat="peep in peeps | filter:search | orderBy:sortOptions">
+			<img ng-src="{{peep.picture.medium}}" class="peep__pic" ng-show="peep.picture.medium" />
+			<div class="peep__info">			
+				<h3>{{peep.name}}</h3>
+				<ul class="peep-info__meta">
+					<li>Age: {{peep.age}}</li>
+					<li>Gender: {{peep.gender}}</li>
+				</ul>
+				<a href="#/peeps/{{peeps.indexOf(peep)}}" class="peep__info-more">Learn More &raquo;</a>
+			</div>
+		</div>
+	</div>
+</div>

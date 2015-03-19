@@ -1,0 +1,37 @@
+.directory {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.peep {
+	background-color: #efefef;
+	margin: .25%;
+	width: 32.75%;
+	@include media($medium) {
+		width: 49.5%;
+	}
+
+	@include media($small) {
+		width: 99.5%;
+	}
+
+	&:hover {
+		box-shadow: 0 0 100px #aaa;
+		transform: scale(1.05);
+		transition: transform .2s;
+	}
+}
+
+.peep__pic {
+	float: left;
+}
+
+.peep__info {
+	margin-left: 165px;
+}
+
+.peep__info-more {
+	color: #7f0000;
+	font-size: 12px;
+}
